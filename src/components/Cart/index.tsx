@@ -14,7 +14,7 @@ export default function Cart() {
     <CartItem key={product.id} product={product} />
   ))
 
-  const renderList = isEmpty ? ( <Col>nenhum produto adicionado</Col>  ) : productList
+  const renderList = isEmpty ? ( <Col>no items added</Col>  ) : productList
  
   return (
     <Fragment>  
