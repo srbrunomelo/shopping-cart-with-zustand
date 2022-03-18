@@ -7,6 +7,7 @@ Testando o Zustand - Uma solução de gerenciamento de estado, rápida e escalá
 - Typescript 
 - React Bootstrap
 - Zustand
+- Jest
 
 ## Demo  
 https://srbrunomelo.github.io/shopping-cart-with-zustand
