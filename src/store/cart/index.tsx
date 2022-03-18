@@ -12,7 +12,7 @@ const useCartStore = create<CartState>((set: SetState<CartState>, get: GetState<
   }, 
 
   addProduct: (newProduct: ProductType) => { 
-    const { products, open } = get();
+    const { products } = get();
     
     if (!products.includes(newProduct)) { 
       set({ products: [...products, newProduct] })
@@ -31,8 +31,7 @@ const useCartStore = create<CartState>((set: SetState<CartState>, get: GetState<
     }
   },
 
-  reset: () => {
-    const { open, products } = get();
+  reset: () => { 
     set({ open: false }) 
     set({ products: [] }) 
   }
