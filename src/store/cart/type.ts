@@ -6,5 +6,6 @@ export type CartState = {
   toggle: () => void
   addProduct: (product: ProductType) => void
   remove: (product: ProductType) => void
+  reset: () => void
 }
   

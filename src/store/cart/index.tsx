@@ -3,10 +3,9 @@ import { ProductType } from '../../components/ProductItem'
 import { CartState } from './type'
 
 const useCartStore = create<CartState>((set: SetState<CartState>, get: GetState<CartState>) => ({
-  products: [],
-
+  products: [], 
   open: false, 
-
+ 
   toggle: () => {
     const { open } = get();
     set({ open: !open })
@@ -19,7 +18,7 @@ const useCartStore = create<CartState>((set: SetState<CartState>, get: GetState<
       set({ products: [...products, newProduct] })
     } 
 
-    set({ open: !open }) 
+    set({ open: true }) 
   },
 
   remove: (product: ProductType) => {
@@ -30,6 +29,12 @@ const useCartStore = create<CartState>((set: SetState<CartState>, get: GetState<
       products.splice(index, 1);
       set({ products })
     }
+  },
+
+  reset: () => {
+    const { open, products } = get();
+    set({ open: false }) 
+    set({ products: [] }) 
   }
    
 }));
